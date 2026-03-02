@@ -164,5 +164,62 @@ input:checked + .slider:before {
 .data-grid { display: flex; justify-content: space-between; margin-bottom: 40px; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 0; }
 .label { font-size: 0.7rem; color: var(--text-dim); margin-bottom: 5px; }
 .value { font-size: 1.2rem; font-weight: 700; }
-
 .modal-actions { display: flex; gap: 10px; justify-content: center; }
+
+/* =========================================
+   RESPONSIVE DESIGN (MOBILE & TABLET FIXES)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Layout & Navigation */
+    body { height: auto; min-height: 100vh; overflow-y: auto; }
+    .layout { flex-direction: column; height: auto; min-height: calc(100vh - 60px); }
+    
+    /* Make Sidebar a Horizontal Scrollable Menu */
+    .sidebar { width: 100%; height: auto; padding: 10px 15px; border-right: none; border-bottom: 1px solid var(--border); overflow-x: auto; flex: none; }
+    .menu-label { display: none; }
+    #menu-list { display: flex; gap: 10px; padding-bottom: 5px; }
+    .menu-btn { width: auto; white-space: nowrap; padding: 8px 12px; font-size: 0.85rem; border-bottom: 2px solid transparent; }
+    .menu-btn:hover { padding-left: 12px; }
+    .menu-btn.active { padding-left: 12px; border-bottom: 2px solid var(--text); }
+    
+    /* Header Fixes */
+    .top-bar { padding: 0 1rem; }
+    .brand { font-size: 1rem; }
+    .nav-right { gap: 10px; }
+    .nav-item { padding: 6px 10px; font-size: 0.7rem; }
+    
+    /* Main Stage & Globals */
+    .stage { padding: 20px 10px; flex: 1; justify-content: flex-start; }
+    .welcome-screen p { margin-right: 5%; margin-left: 5%; font-size: 1rem; }
+    .target-box { width: 85vw; height: 85vw; max-width: 300px; max-height: 300px; font-size: 1.5rem; }
+    
+    /* Game Specific Adjustments */
+    .typing-area { max-width: 100%; padding: 0 10px; }
+    .typing-text, .typing-input { font-size: 1.1rem; }
+    .number-display { font-size: 3.5rem; letter-spacing: 5px; }
+    .stroop-word { font-size: 3.5rem; margin-bottom: 20px; }
+    .grid-system { justify-content: center; }
+    .cell { width: 100% !important; height: auto !important; aspect-ratio: 1/1; font-size: 1.2rem; }
+    .est-opt { width: 100%; margin: 5px 0; }
+    
+    /* UI Elements */
+    .info-panel { right: 5%; top: 60px; width: 90%; }
+    .modal-content { padding: 25px 15px; width: 95%; margin: 10px; }
+    .score-display { font-size: 4rem; }
+    .data-grid { gap: 10px; padding: 15px 0; }
+    .value { font-size: 1rem; }
+    .modal-actions { flex-direction: column; }
+    .btn { width: 100%; margin: 5px 0; }
+    
+    /* Stats Table */
+    .stats-table th, .stats-table td { padding: 10px 5px; font-size: 0.75rem; }
+    .stats-table { width: 100%; overflow-x: auto; display: block; }
+}
+
+/* Extra small screens (e.g. older/narrow iPhones) */
+@media (max-width: 480px) {
+    .brand { font-size: 0.85rem; letter-spacing: 0; }
+    .nav-item { font-size: 0.65rem; padding: 5px 8px; }
+    .score-display { font-size: 3rem; }
+    .stats-table th, .stats-table td { font-size: 0.65rem; }
+}
