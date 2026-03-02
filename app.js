@@ -162,10 +162,10 @@ const App = {
         this.clear();
         this.updateInfo(null);
         document.querySelectorAll('.menu-btn').forEach(b => b.classList.remove('active'));
-        let html = `<div style="width:100%; max-width:800px; margin:auto; text-align:left;">
-            <div style="display:flex; justify-content:space-between; align-items:flex-end; margin-bottom:20px;">
-                <h1 style="margin:0;">STATISTICS</h1>
-                <button class="btn secondary" style="border-color:var(--error); color:var(--error); padding: 8px 16px; font-size: 0.8rem; margin:0;" onclick="App.resetAllStats()">RESET ALL</button>
+        let html = `<div style="width:100%; max-width:800px; margin:auto; text-align:left; padding: 0 10px;">
+            <div style="display:flex; justify-content:space-between; align-items: center; margin-bottom: 40px; padding-top: 20px; gap: 20px;">
+                <h1 style="margin:0; font-size: 1.8rem; letter-spacing: 2px;">STATISTICS</h1>
+                <button class="btn secondary" style="border-color:var(--error); color:var(--error); padding: 10px 20px; font-size: 0.75rem; margin:0; white-space: nowrap;" onclick="App.resetAllStats()">RESET ALL</button>
             </div>
             <table class="stats-table">
                 <thead>
@@ -357,7 +357,7 @@ const App = {
         document.getElementById('start-chimp').onclick = () => {
             let count = 4;
             const play = () => {
-                m.innerHTML = `<div class="grid-system" style="grid-template-columns:repeat(6, 80px);"></div>`;
+                m.innerHTML = `<div class="grid-system" style="grid-template-columns:repeat(6, min(14vw, 80px));"></div>`;
                 const grid = m.querySelector('.grid-system');
                 let pos = [...Array(36).keys()].sort(() => 0.5 - Math.random()).slice(0, count);
                 let next = 1;
@@ -386,7 +386,7 @@ const App = {
          document.getElementById('start-vis').onclick = () => {
             let level = 1, size = 3;
             const play = () => {
-                m.innerHTML = `<div class="grid-system" id="v-grid" style="grid-template-columns:repeat(${size}, 80px);"></div>`;
+                m.innerHTML = `<div class="grid-system" id="v-grid" style="grid-template-columns:repeat(${size}, min(18vw, 80px));"></div>`;
                 const grid = document.getElementById('v-grid');
                 let count = size + 1, found = 0;
                 let targets = [...Array(size*size).keys()].sort(()=>0.5-Math.random()).slice(0, count);
@@ -413,7 +413,7 @@ const App = {
     run_sequence(m) {
         m.innerHTML = `<button class="btn primary" id="start-seq">START MODULE</button>`;
         document.getElementById('start-seq').onclick = () => {
-            m.innerHTML = `<div class="grid-system" id="s-grid" style="grid-template-columns:repeat(3, 90px);"></div>`;
+            m.innerHTML = `<div class="grid-system" id="s-grid" style="grid-template-columns:repeat(3, min(25vw, 90px));"></div>`;
             const grid = document.getElementById('s-grid');
             for(let i=0; i<9; i++) { const c = document.createElement('div'); c.className = 'cell'; c.dataset.i = i; grid.appendChild(c); }
             
