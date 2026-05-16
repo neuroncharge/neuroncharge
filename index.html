@@ -2,90 +2,183 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="NEURONCHARGE lets you test your reaction time, memory, and cognitive speed with its modules designed to measure focus, accuracy, reflex and mental performance." />
-    <meta name="keywords" content="neuroncharge, human benchmark, human benchmark tests, reaction test, speed, neuroncharge.com, chimp test, typing speed test, typing, cps test, visual test, memory test, human statistics, reflex test" />
-    <meta name="author" content="neuroncharge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-adsense-account" content="ca-pub-2480571735045834">
-    <title>NEURONCHARGE</title>
-    <link rel="icon" href="neuroncharge_favicon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
+    <!-- The meta tag below ensures perfect scaling on all mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>neuroncharge.com is for sale</title>
+    <style>
+        :root {
+            /* Light Minimalist Palette */
+            --bg-color: #f4f4f5;
+            --card-bg: #ffffff;
+            --text-main: #111111;
+            --text-muted: #6b7280;
+            --text-light: #9ca3af;
+            --accent-strong: #000000;
+            --border-subtle: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* Locks the screen height and disables scrolling */
+        body, html {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100dvh; 
+            overflow: hidden; 
+        }
+
+        .container {
+            width: 90%;
+            max-width: 550px;
+            text-align: center;
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-subtle);
+            max-height: 95dvh; 
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .badge {
+            align-self: center;
+            color: var(--text-main);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            border: 1px solid var(--text-main);
+        }
+
+        /* clamp() ensures fonts shrink automatically on smaller phones */
+        h1 {
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 10px;
+            letter-spacing: -0.03em;
+        }
+
+        h1 span.tld {
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        .tagline {
+            color: var(--text-muted);
+            font-size: clamp(0.9rem, 3vw, 1rem);
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .price-box {
+            padding: 20px;
+            margin-bottom: 25px;
+            border-top: 1px solid var(--border-subtle);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .price-label {
+            font-size: 0.75rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 600;
+        }
+
+        .price-value {
+            font-size: clamp(2.5rem, 8vw, 3.5rem);
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 5px 0;
+            letter-spacing: -0.04em;
+        }
+
+        .btn-buy {
+            display: block;
+            background: var(--accent-strong);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 15px;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            border: 1px solid var(--accent-strong);
+        }
+
+        .btn-buy:hover {
+            background: #ffffff;
+            color: var(--accent-strong);
+        }
+
+        .btn-offer {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-bottom: 1px solid transparent;
+            transition: color 0.2s, border-color 0.2s;
+        }
+        
+        .btn-offer:hover {
+            color: var(--text-main);
+            border-color: var(--text-main);
+        }
+
+        .footer-trust {
+            margin-top: 25px;
+            font-size: 0.75rem;
+            color: var(--text-light);
+            line-height: 1.4;
+        }
+
+        /* Adjustments for horizontal/landscape phones to prevent clipping */
+        @media (max-height: 600px) {
+            .container { padding: 20px; }
+            .tagline { margin-bottom: 15px; display: none; /* Hides tagline on very short screens to save space */ }
+            .price-box { padding: 10px; margin-bottom: 15px; }
+            .footer-trust { margin-top: 15px; }
+        }
+    </style>
 </head>
-<body data-theme="light">
-    <nav class="top-bar">
-        <div class="brand" onclick="App.loadHome()" style="cursor:pointer;">NEURON<span class="brand" style="font-weight:300; opacity:1;">CHARGE</span></div>
-        <div class="nav-right">
-    <button class="icon-btn" id="info-btn" title="How to play">ℹ️</button>
-    <label class="theme-switch" title="Toggle Theme">
-        <input type="checkbox" id="theme-checkbox">
-        <span class="slider"></span>
-    </label>
-    <button class="nav-item" onclick="App.showStats()">MY STATS</button>
-</div>
-    </nav>
+<body>
 
-    <div id="info-panel" class="info-panel hidden">
-        <div class="info-header">MODULE INSTRUCTIONS</div>
-        <div id="info-text">Select a test to view instructions.</div>
-    </div>
-
-    <div class="layout">
-        <aside class="sidebar">
-            <div class="menu-label">MODULE</div>
-            <div id="menu-list"></div>
-        </aside>
-
-        <main class="stage" id="stage">
-            </main>
-    </div>
-
-    <footer class="footer">
-        &copy; 2026 neuroncharge. All rights reserved. | <span class="text-link" onclick="App.showPrivacyPolicy()">Privacy Policy</span>
-    </footer>
-
-    <div id="modal" class="modal hidden">
-        <div class="modal-content">
-            <div class="modal-header">RESULT</div>
-            <div class="score-display">
-                <span id="score-val">0</span>
-                <span id="score-unit" class="unit">ms</span>
-            </div>
-            
-            <div class="data-grid">
-                <div class="data-item">
-                    <div class="label">BEST</div>
-                    <div class="value" id="res-best">--</div>
-                </div>
-                <div class="data-item">
-                    <div class="label">AVERAGE</div>
-                    <div class="value" id="res-avg">--</div>
-                </div>
-                <div class="data-item">
-                    <div class="label">ATTEMPTS</div>
-                    <div class="value" id="res-count">0</div>
-                </div>
-            </div>
-
-            <div class="modal-actions">
-                <button class="btn primary" id="btn-retry">RETRY MODULE</button>
-                <button class="btn secondary" onclick="App.loadHome()">DASHBOARD</button>
-            </div>
+    <div class="container">
+        <div class="badge">Available for acquisition</div>
+        
+        <h1>neuroncharge<span class="tld">.com</span></h1>
+        
+        <p class="tagline">A sharp, compelling brand identity ready for your next technology, AI, or energy venture.</p>
+        
+        <div class="price-box">
+            <p class="price-label">Purchase Price</p>
+            <p class="price-value">$500000</p>
+            <p class="price-label">USD • Secure Transfer</p>
         </div>
-    </div>
-    <div id="confirm-modal" class="modal hidden">
-    <div class="modal-content confirm-box">
-        <div class="modal-header" id="confirm-title">WARNING</div>
-        <p id="confirm-msg" style="margin-bottom: 30px; line-height: 1.5; color: var(--text-dim);"></p>
-        <div class="modal-actions">
-            <button class="btn secondary" id="confirm-cancel">CANCEL</button>
-            <button class="btn primary" id="confirm-ok" style="background: var(--error); border-color: var(--error); color: white;">PROCEED</button>
-        </div>
+
+        <!-- REPLACE THE HREF URL BELOW WITH YOUR ACTUAL NAMECHEAP MARKETPLACE LINK -->
+        <a href="https://www.namecheap.com/domains/marketplace/" class="btn-buy">Buy via Namecheap Escrow</a>
+        
+        <p class="tagline">Contact the owner: someone.morpho@gmail.com </p>
+        <div class="footer-trust">
+            <p>Secure digital transaction handled by registrar.</p>
+            <p>Domain ownership transferred immediately upon payment.</p>
         </div>
     </div>
 
-    <script src="app.js"></script>
 </body>
-
 </html>
-
-
