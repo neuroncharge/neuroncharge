@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Memory</title>
+<meta name="description" content="A number flashes for two seconds. Type it from memory.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="../0.1.png">
+</head>
+<body>
+<nav class="top-bar">
+  <a href="../index.html" class="brand">NEURONCHARGE</a>
+  <div class="nav-right">
+    <a href="../neuron-metrics.html" class="back-link">← All metrics</a>
+    <a href="../insights.html" class="nav-link">Insights</a>
+  </div>
+</nav>
+
+<header class="module-head">
+  <div class="eyebrow">Neuron Metrics</div>
+  <h1>Number Memory</h1>
+  <p>A number flashes for two seconds. Type it from memory.</p>
+</header>
+
+<main class="stage">
+  <div id="game-mount"></div>
+</main>
+
+<footer class="footer" style="display: flex; justify-content: center; gap: 1.5rem; align-items: center;">
+  <span>© 2026 neuroncharge</span>
+  <a href="../privacy.html" style="text-decoration: underline; text-underline-offset: 4px;">Privacy Policy</a>
+</footer>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-content">
+    <div class="modal-header">Result</div>
+    <div class="score-display"><span id="score-val">0</span><span id="score-unit" class="unit">ms</span></div>
+    <div class="data-grid">
+      <div class="data-item"><div class="label">Best</div><div class="value" id="res-best">—</div></div>
+      <div class="data-item"><div class="label">Average</div><div class="value" id="res-avg">—</div></div>
+      <div class="data-item"><div class="label">Attempts</div><div class="value" id="res-count">0</div></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn primary" id="btn-retry">Retry</button>
+      <a class="btn secondary" href="../neuron-metrics.html">Back</a>
+    </div>
+  </div>
+</div>
+
+<script src="core.js"></script>
+<script>App.run('number');</script>
+</body>
+</html>

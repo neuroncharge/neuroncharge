@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ambient</title>
+<meta name="description" content="Ambient sound console.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" type="image/png" href="../0.1.png">
+
+</head>
+<body>
+<nav class="top-bar">
+  <a href="../index.html" class="brand">NEURONCHARGE</a>
+  <div class="nav-right">
+    <a href="../neuron-metrics.html" class="nav-link">Metrics</a>
+    <a href="../universal-calcs.html" class="nav-link">Calcs</a>
+    <a href="../calm-space.html" class="nav-link">Calm</a>
+    <a href="../insights.html" class="nav-link">Insights</a>
+  </div>
+</nav><header class="module-head">
+  <div class="eyebrow">Calm · Ambient</div>
+  <h1>Ambient Acoustic Console</h1>
+  <p>Layer textures to mask distraction. All sound is generated locally — nothing streams.</p>
+</header>
+<section class="section">
+  <div class="center-card" style="text-align:left;">
+    <div class="amb-row"><div class="amb-head"><span class="lbl">Brown noise</span><span class="val" id="v-brown">0</span></div><input type="range" min="0" max="1" step="0.01" value="0" data-layer="brown"></div>
+    <div class="amb-row"><div class="amb-head"><span class="lbl">Rain (filtered noise)</span><span class="val" id="v-rain">0</span></div><input type="range" min="0" max="1" step="0.01" value="0" data-layer="rain"></div>
+    <div class="amb-row"><div class="amb-head"><span class="lbl">Slow waves</span><span class="val" id="v-waves">0</span></div><input type="range" min="0" max="1" step="0.01" value="0" data-layer="waves"></div>
+    <p style="font-size:.75rem;color:var(--text-dim);margin-top:1.25rem;padding-top:1rem;border-top:1px solid var(--hairline);">Tip — pin this tab. Audio keeps running while you work.</p>
+  </div>
+</section>
+
+<footer class="footer" style="display: flex; justify-content: center; gap: 1.5rem; align-items: center;">
+  <span>© 2026 neuroncharge</span>
+  <a href="../privacy.html" style="text-decoration: underline; text-underline-offset: 4px;">Privacy Policy</a>
+</footer>
+<script src="../app.js" defer></script>
+</body>
+</html>

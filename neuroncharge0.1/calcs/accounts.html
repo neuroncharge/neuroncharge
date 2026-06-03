@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accounts</title>
+<meta name="description" content="Project savings growth.">
+<link rel="stylesheet" href="../style.css">
+<link rel="icon" type="image/png" href="../0.1.png">
+
+</head>
+<body>
+<nav class="top-bar">
+  <a href="../index.html" class="brand">NEURONCHARGE</a>
+  <div class="nav-right">
+    <a href="../neuron-metrics.html" class="nav-link">Metrics</a>
+    <a href="../universal-calcs.html" class="nav-link">Calcs</a>
+    <a href="../calm-space.html" class="nav-link">Calm</a>
+    <a href="../insights.html" class="nav-link">Insights</a>
+  </div>
+</nav><header class="module-head">
+  <div class="eyebrow">Accounts</div>
+  <h1>Compound Interest</h1>
+  <p>Project savings growth with optional monthly contributions.</p>
+</header>
+<section class="calc-wrap split">
+  <div>
+    <div class="field"><div class="lbl">Principal </div><input type="number" id="p" value="10000"></div>
+    <div class="field"><div class="lbl">Annual rate (%)</div><input type="number" id="r" value="7"></div>
+    <div class="field"><div class="lbl">Years</div><input type="number" id="t" value="10"></div>
+    <div class="field"><div class="lbl">Compounds / year</div>
+      <select id="n"><option value="1">Annually (1)</option><option value="4">Quarterly (4)</option><option value="12" selected>Monthly (12)</option><option value="365">Daily (365)</option></select>
+    </div>
+    <div class="field"><div class="lbl">Monthly contribution </div><input type="number" id="c" value="200"></div>
+  </div>
+  <div class="panel">
+    <div class="out"><div class="lbl">Future value</div><div class="val" id="o-fv">—</div></div>
+    <div class="out"><div class="lbl">Principal</div><div class="val" id="o-p">—</div></div>
+    <div class="out"><div class="lbl">Contributions</div><div class="val" id="o-c">—</div></div>
+    <div class="out"><div class="lbl">Interest earned</div><div class="val" id="o-i">—</div></div>
+  </div>
+</section>
+
+<footer class="footer" style="display: flex; justify-content: center; gap: 1.5rem; align-items: center;">
+  <span>© 2026 neuroncharge</span>
+  <a href="../privacy.html" style="text-decoration: underline; text-underline-offset: 4px;">Privacy Policy</a>
+</footer>
+<script src="../app.js" defer></script>
+</body>
+</html>

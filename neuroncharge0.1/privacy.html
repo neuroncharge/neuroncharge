@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy</title>
+<meta name="description" content="Our privacy policy regarding local data, analytics, and advertising.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/png" href="0.1.png">
+<style>
+  .policy-block { margin-bottom: 2.5rem; }
+  .policy-block h2 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.75rem; letter-spacing: -0.01em; }
+  .policy-block p { color: var(--text-dim); line-height: 1.65; margin-bottom: 1rem; font-size: 0.95rem; }
+  .policy-block ul { margin-left: 1.5rem; color: var(--text-dim); line-height: 1.65; font-size: 0.95rem; margin-bottom: 1rem; }
+  .policy-block li { margin-bottom: 0.5rem; }
+  .policy-block a { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+  .policy-block a:hover { color: var(--text-dim); }
+  
+  /* Responsive wrapper - margin set to 0 to force left alignment */
+  .privacy-panel {
+    width: 100%;
+    max-width: 880px;
+    margin: 0; 
+    padding: 2.5rem;
+    box-sizing: border-box;
+  }
+  
+  /* Override default centered header to flush left */
+  .header-left {
+    margin-left: 0 !important;
+    text-align: left;
+  }
+  
+  /* Reduces padding on mobile to give text more breathing room */
+  @media (max-width: 640px) {
+    .privacy-panel {
+      padding: 1.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+<nav class="top-bar">
+  <div class="brand">
+  <a href="index.html" class="brand">neuroncharge</a><span class="modal-trigger" style="margin-left: 30px; cursor: pointer;">0.1</span>
+  </div>
+  <div class="nav-right">
+    <a href="neuron-metrics.html" class="nav-link">Metrics</a>
+    <a href="universal-calcs.html" class="nav-link">Calcs</a>
+    <a href="calm-space.html" class="nav-link">Calm</a>
+    <a href="insights.html" class="nav-link">Insights</a>
+  </div>
+</nav>
+
+<!-- Added .header-left class to align the top section -->
+<header class="module-head" style="max-width: 1100px;">
+  <div class="eyebrow">Legal</div>
+  <h1>Privacy Policy</h1>
+  <p>Effective Date: June 2026. An overview of how we handle local calculations, analytics, and advertising data.</p>
+</header>
+
+<section class="section">
+  <!-- The opening tag for the white box. All text MUST go below this line. -->
+  <div class="panel privacy-panel">
+    
+    <div class="policy-block">
+      <h2>1. Local Processing of Cognitive & Calculation Data</h2>
+      <p>The core functionality of our platform—including your mathematical inputs, physics calculations, and Neuron Metrics test results—operates entirely on your device. We do not transmit, harvest, or store the specific numbers you calculate or your cognitive test scores on our servers. Your progress is saved locally using your browser's native <code>localStorage</code> architecture, meaning you retain complete control over your historical data via the Insights dashboard.</p>
+    </div>
+
+    <div class="policy-block">
+      <h2>2. Google Analytics (Usage Data)</h2>
+      <p>To understand how visitors interact with our modules and to improve the platform, we use Google Analytics. This service collects standard internet log information and visitor behavior data in an anonymous form.</p>
+      <ul>
+        <li><strong>Data collected:</strong> This includes your IP address, browser type, device information, pages visited, and the time spent on the site.</li>
+        <li><strong>Opt-out:</strong> You can opt out of having your site activity available to Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a>.</li>
+      </ul>
+    </div>
+
+    <div class="policy-block">
+      <h2>3. Google AdSense & Advertising Cookies</h2>
+      <p>We use Google AdSense to display advertisements on our site. To serve these ads effectively, Google and its third-party vendors use cookies to track user interactions.</p>
+      <ul>
+        <li>Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this website or other websites.</li>
+        <li>Google's use of advertising cookies enables it and its partners to serve personalized ads to you based on your visit to our site and/or other sites on the Internet.</li>
+        <li><strong>Opt-out:</strong> You may opt out of personalized advertising by visiting Google's <a href="https://myadcenter.google.com/" target="_blank" rel="noopener noreferrer">Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer">www.aboutads.info</a>.</li>
+      </ul>
+    </div>
+
+    <div class="policy-block">
+      <h2>4. Cookies and Web Beacons</h2>
+      <p>A cookie is a small text file placed on your device to collect standard internet log information. In addition to local storage for your metrics, our site uses cookies strictly for the analytics and advertising purposes mentioned above. You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies.</p>
+    </div>
+
+    <div class="policy-block">
+      <h2>5. Your Data Rights</h2>
+      <p>Depending on your region (such as under the GDPR in Europe or the CCPA in California), you have rights regarding your personal data, including the right to access, correct, or delete it. Because your calculation and metric data is stored exclusively on your device, you can delete it immediately by clearing your browser data or using the reset function on the Insights page. For data collected via Google's analytics and advertising networks, please refer to their respective privacy tools and opt-out links provided above.</p>
+    </div>
+
+    <div class="policy-block">
+      <h2>6. Policy Modifications</h2>
+      <p>We reserve the right to update this policy as our infrastructure or legal requirements evolve. Any modifications will be posted directly to this page.</p>
+    </div>
+
+    <div class="policy-block">
+      <h2>7. System Stability & Mathematical Estimations</h2>
+      <p></p>
+      <ul>
+        <li>Beta Software Notice</li>
+        <p>neuroncharge is currently running in version 3.926 Beta. The platform is provided on an "as-is" and "as-available" basis. As we continuously update our architecture and introduce new modules, you may experience occasional instability, layout shifts, or local storage resets.</p>
+        <li>Accuracy of Calculations</li>
+        <p>While our internal systems use precise rounding to 8 significant figures and native scientific notation boundaries to safeguard layout integrity, all output parameters—including compound interest projections, physics equations, and health metrics (BMI/BMR)—are mathematical estimations. They are designed exclusively for general reference, interactive learning, and conceptual testing.</p>
+        <li>No Professional Advice</li>
+        <p>None of the data generated by our tools constitutes professional financial, investment, medical, or legal advice. Users are fully responsible for verifying critical data independently before making real-world decisions. For formal legal or business inquiries regarding our platforms, domain structures, or partnership terms, please contact: neuroncharge@gmail.com .</p>
+      </ul>
+    </div>
+
+  <!-- This closing tag seals the white box. Do not put text below this line. -->
+  </div>
+</section>
+
+<div id="version-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" id="close-modal">&times;</button>
+    <h2>System Status: 3.926 Beta</h2>
+    <p>We are continuously improving this platform. Please note that this current version may not be fully stable across all devices, and the calculations or metrics provided should be considered functional estimations rather than absolute clinical or financial facts. We are expanding our ecosystem and will be introducing a dedicated login function alongside more advanced calculators soon. For business inquiries or to report bugs, please reach out to us at neuroncharge@gmail.com .</p>
+   </div>
+</div>
+
+<footer class="footer" style="display: flex; justify-content: center; gap: 1.5rem; align-items: center;">
+  <span>© 2026 neuroncharge</span>
+  <a href="privacy.html" style="text-decoration: underline; text-underline-offset: 4px;">Privacy Policy</a>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
